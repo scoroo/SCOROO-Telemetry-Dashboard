@@ -19,20 +19,20 @@ text
 
 ## 📂 File Structure
 DayZCarTelemetry/
-├── car_telemetry.json ← Vehicle data (auto-generated)
-├── map.html ← Map screen
-├── map1.html ← Terrain map
-├── nav1.html ← Navigation screen
-├── radio.html ← FM radio screen
-├── speed.html ← Classic dash
-├── speed1.html ← Sport dash
-├── speed2.html ← Digital dash
-├── index.html ← Main dashboard
-├── start_dashboard.bat ← Launcher
-├── map_images/ ← All icons & map tiles
-│ ├── car.svg
-│ ├── DayZ_1.25.0_*.jpg
-│ └── ... (all SVG icons)
+├── car_telemetry.json
+├── map.html
+├── map1.html
+├── nav1.html
+├── radio.html
+├── speed.html
+├── speed1.html
+├── speed2.html
+├── index.html
+├── start_dashboard.bat
+├── map_images/
+│   ├── car.svg
+│   ├── DayZ_1.25.0_*.jpg
+│   └── ... (all SVG icons)
 └── README.md
 
 text
