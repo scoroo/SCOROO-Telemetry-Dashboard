@@ -1,130 +1,228 @@
-# SCOROO Telemetry Dashboard
-## 🚗 Vehicle Telemetry + Navigation System for DayZ
+# 🚗 SCOROO Telemetry Dashboard
+
+Vehicle Telemetry + Navigation System for DayZ
 
 A real-time multi-screen dashboard that pulls vehicle telemetry data from DayZ and displays it across 3 synchronized screens.
 
 ---
 
-## 📁 Where to Install
-%localappdata%\DayZ\DayZCarTelemetry\
+## 📁 Installation Location
 
-text
+Copy the dashboard folder to:
+
+```text
+%localappdata%\DayZ\DayZCarTelemetry\
+```
 
 Or manually:
-C:\Users\YourName\AppData\Local\DayZ\DayZCarTelemetry\
 
-text
+```text
+C:\Users\YourName\AppData\Local\DayZ\DayZCarTelemetry\
+```
 
 ---
 
 ## 📂 File Structure
-DayZCarTelemetry/
-========car_telemetry.json
-========map.html
-========map1.html
-========nav1.html
-========radio.html
-========speed.html
-========speed1.html
-========speed2.html
-========index.html
-========start_dashboard.bat
-========map_images/
-================car.svg
-================ DayZ_1.25.0_*.jpg
-================(all SVG icons)
-========README.md
 
-text
+```text
+DayZCarTelemetry/
+├── car_telemetry.json          # Vehicle data (auto-generated)
+├── map.html                    # Map screen
+├── map1.html                   # Terrain map
+├── nav1.html                   # Navigation screen
+├── radio.html                  # FM radio screen
+├── speed.html                  # Classic dashboard
+├── speed1.html                 # Sport dashboard
+├── speed2.html                 # Digital dashboard
+├── index.html                  # Main dashboard
+├── start_dashboard.bat         # Launcher
+├── map_images/
+│   ├── car.svg
+│   ├── DayZ_1.25.0_*.jpg
+│   └── (all SVG icons and map assets)
+└── README.md
+```
 
 ---
 
 ## 🚀 How to Start
 
-### Method 1: Double-click
-Double-click start_dashboard.bat
+### Method 1: Double Click
 
-text
+Run:
 
-### Method 2: Manual
-Open Command Prompt in the DayZCarTelemetry folder
-Type: python -m http.server 3600
-Open browser: http://localhost:3600
+```text
+start_dashboard.bat
+```
 
-text
+### Method 2: Manual Start
+
+Open Command Prompt inside the dashboard folder and run:
+
+```bash
+python -m http.server 3600
+```
+
+Then open:
+
+```text
+http://localhost:3600
+```
+
+in your browser.
 
 ---
 
 ## 🎮 How to Use
 
 ### 1. In DayZ
-- Get in any vehicle
-- The mod automatically writes telemetry data to `car_telemetry.json`
 
-### 2. In Dashboard
-- **Map** – Click towns to set destination, search locations, zoom in/out
-- **Navigation** – Shows turn-by-turn arrows, ETA, distance, compass
-- **Speed** – Switch between Classic/Sport/Digital styles
+* Enter any vehicle.
+* The telemetry mod automatically writes live data to:
+
+```text
+car_telemetry.json
+```
+
+### 2. Dashboard Features
+
+#### 🗺️ Map Screen
+
+* Click towns to set destinations
+* Search locations
+* Zoom in and out
+* Live vehicle tracking
+
+#### 🧭 Navigation Screen
+
+* Turn-by-turn directions
+* Distance to destination
+* ETA calculation
+* Compass heading
+
+#### 🚗 Dashboard Screens
+
+Switch between:
+
+* Classic Dashboard
+* Sport Dashboard
+* Digital Dashboard
 
 ### 3. Controls
-- **Theme Buttons** – Switch map style, nav mode, dash style
-- **Landscape/Portrait** – Toggle layout
-- **Frameless** – Hide headers for full-screen view
+
+| Control              | Function                                    |
+| -------------------- | ------------------------------------------- |
+| Theme Buttons        | Change map, navigation and dashboard styles |
+| Landscape / Portrait | Toggle screen orientation                   |
+| Frameless Mode       | Hide headers for fullscreen displays        |
 
 ---
 
 ## 🛠️ Requirements
 
-- Python 3.x installed (for HTTP server)
-- Modern browser (Chrome/Edge/Firefox)
-- DayZ with SCOROO Telemetry Mod
+* Python 3.x
+* Modern web browser (Chrome, Edge, Firefox)
+* DayZ
+* SCOROO Telemetry Mod
 
 ---
 
 ## 📡 Data Flow
-DayZ Vehicle → car_telemetry.json → Dashboard (3 screens)
-↓ ↓ ↓
-Position Speed/RPM Live Updates
-Heading Fuel/Temp Every 100ms
-Gear Warnings Cross-Screen Sync
 
-text
+```text
+DayZ Vehicle
+      │
+      ▼
+car_telemetry.json
+      │
+      ▼
+SCOROO Dashboard
+      │
+      ├── Map Screen
+      ├── Navigation Screen
+      └── Dashboard Screen
+```
+
+Live updates every 100ms.
+
+Telemetry includes:
+
+* Vehicle Position
+* Heading
+* Speed
+* RPM
+* Gear
+* Fuel Level
+* Coolant Temperature
+* Vehicle Warnings
 
 ---
 
 ## 🚁 Helicopter Version (Coming Soon)
 
-A 6-dash helicopter telemetry variant with:
-- Altitude, vertical speed, rotor RPM
-- Engine temp, fuel, artificial horizon
-- GPS map, navigation, and warning system
+Planned 6-screen aviation dashboard featuring:
+
+* Altitude
+* Vertical Speed
+* Rotor RPM
+* Engine Temperature
+* Fuel Monitoring
+* Artificial Horizon
+* GPS Navigation
+* Flight Warnings
 
 ---
 
 ## 🔗 Links
 
-- **GitHub:** https://github.com/scoroo/SCOROO-Telemetry-Dashboard
-- **Author:** SCOROO
+### GitHub Repository
+
+https://github.com/scoroo/SCOROO-Telemetry-Dashboard
+
+### DayZ Workshop
+
+https://steamcommunity.com/profiles/76561198972868854/myworkshopfiles/?appid=221100
 
 ---
 
-## 📝 Quick Start Summary
+## ⚡ Quick Start
 
-1. Copy folder to `%localappdata%\DayZ\DayZCarTelemetry\`
-2. Double-click `start_dashboard.bat`
-3. Open `http://localhost:3600` in browser
-4. Get in a vehicle in DayZ
-5. Watch live telemetry on all 3 screens!
+1. Copy the folder to:
+
+```text
+%localappdata%\DayZ\DayZCarTelemetry\
+```
+
+2. Run:
+
+```text
+start_dashboard.bat
+```
+
+3. Open:
+
+```text
+http://localhost:3600
+```
+
+4. Enter a vehicle in DayZ.
+
+5. Watch live telemetry update across all dashboard screens.
 
 ---
 
-## ⚠️ Important
+## ⚠️ Important Notes
 
-- Python 3 must be installed
-- Run the .bat file before opening the browser
-- All files must stay in the same folder
-- The mod works with any vehicle in DayZ
+* Python 3 must be installed.
+* Start the local server before opening the dashboard.
+* Keep all files together in the same folder.
+* Compatible with all DayZ vehicles supported by the telemetry mod.
 
 ---
 
-**Enjoy your SCOROO Telemetry Dashboard!** 🏎️💨
+## 📜 Author
+
+**SCOROO**
+
+Enjoy your SCOROO Telemetry Dashboard! 🏎️💨
+
