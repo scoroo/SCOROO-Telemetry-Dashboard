@@ -19,21 +19,21 @@ text
 
 ## 📂 File Structure
 DayZCarTelemetry/
-├── car_telemetry.json
-├── map.html
-├── map1.html
-├── nav1.html
-├── radio.html
-├── speed.html
-├── speed1.html
-├── speed2.html
-├── index.html
-├── start_dashboard.bat
-├── map_images/
-│   ├── car.svg
-│   ├── DayZ_1.25.0_*.jpg
-│   └── ... (all SVG icons)
-└── README.md
+========car_telemetry.json
+========map.html
+========map1.html
+========nav1.html
+========radio.html
+========speed.html
+========speed1.html
+========speed2.html
+========index.html
+========start_dashboard.bat
+========map_images/
+================car.svg
+================ DayZ_1.25.0_*.jpg
+================(all SVG icons)
+========README.md
 
 text
 
